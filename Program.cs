@@ -14,8 +14,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// Redirect root URL ("/") to Swagger
-app.MapGet("/", () => Results.Redirect("/swagger"));
+
 
 // app.UseHttpsRedirection();
 
@@ -23,7 +22,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-// Automatically open Swagger UI in the default browser
 #if DEBUG
 var swaggerUrl = "http://localhost:5240/swagger";
 try
