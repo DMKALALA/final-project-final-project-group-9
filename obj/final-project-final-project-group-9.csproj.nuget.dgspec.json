@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\DENIS\\OneDrive\\Documents\\IT 3045C - Contemporary Programming\\final-project-final-project-group-9\\final-project-final-project-group-9.csproj": {}
+    "C:\\Users\\DENIS\\OneDrive\\Documents\\IT 3045C - Contemporary Programming\\final-project-final-project-group-9\\final-project-final-project-group-9.csproj": {}
   },
   "projects": {
-    "c:\\Users\\DENIS\\OneDrive\\Documents\\IT 3045C - Contemporary Programming\\final-project-final-project-group-9\\final-project-final-project-group-9.csproj": {
+    "C:\\Users\\DENIS\\OneDrive\\Documents\\IT 3045C - Contemporary Programming\\final-project-final-project-group-9\\final-project-final-project-group-9.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\DENIS\\OneDrive\\Documents\\IT 3045C - Contemporary Programming\\final-project-final-project-group-9\\final-project-final-project-group-9.csproj",
+        "projectUniqueName": "C:\\Users\\DENIS\\OneDrive\\Documents\\IT 3045C - Contemporary Programming\\final-project-final-project-group-9\\final-project-final-project-group-9.csproj",
         "projectName": "final-project-final-project-group-9",
-        "projectPath": "c:\\Users\\DENIS\\OneDrive\\Documents\\IT 3045C - Contemporary Programming\\final-project-final-project-group-9\\final-project-final-project-group-9.csproj",
+        "projectPath": "C:\\Users\\DENIS\\OneDrive\\Documents\\IT 3045C - Contemporary Programming\\final-project-final-project-group-9\\final-project-final-project-group-9.csproj",
         "packagesPath": "C:\\Users\\DENIS\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\DENIS\\OneDrive\\Documents\\IT 3045C - Contemporary Programming\\final-project-final-project-group-9\\obj\\",
+        "outputPath": "C:\\Users\\DENIS\\OneDrive\\Documents\\IT 3045C - Contemporary Programming\\final-project-final-project-group-9\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
