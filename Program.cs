@@ -1,9 +1,44 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+
+using final_project_final_project_group_9.Data;
+using final_project_final_project_group_9.Interfaces;
+using final_project_final_project_group_9.Controllers;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// API Controllers
 builder.Services.AddControllers();
+
+
+//Database contexts and connection string
+builder.Services.AddDbContext<TeamMembersContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("TeamMembersContext")));
+
+builder.Services.AddDbContext<FavoriteFoodsContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("FavoriteFoodsContext")));
+
+builder.Services.AddDbContext<CoursesContext>(options => 
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CoursesContext")));
+
+builder.Services.AddDbContext<TVShowsContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("TVShowsContext")));
+
+// Data Access Objects
+builder.Services.AddScoped<TeamMembersContextDAO>();
+builder.Services.AddScoped<FoodsContextDAO>();
+builder.Services.AddScoped<CoursesContextDAO>();
+builder.Services.AddScoped<TVShowsContextDAO>();
+
+
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerDocument();
+
+
 
 var app = builder.Build();
 
@@ -14,29 +49,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-
-
-// app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
-
-#if DEBUG
-var swaggerUrl = "http://localhost:5240/swagger";
-try
-{
-    var psi = new System.Diagnostics.ProcessStartInfo
-    {
-        FileName = swaggerUrl,
-        UseShellExecute = true
-    };
-    System.Diagnostics.Process.Start(psi);
-}
-catch (Exception ex)
-{
-    Console.WriteLine($"Failed to open Swagger UI: {ex.Message}");
-}
-#endif
 
 app.Run();
