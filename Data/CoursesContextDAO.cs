@@ -1,7 +1,7 @@
-using final-project-final-project-group-9.Interfaces;
-using final-project-final-project-group-9.Models;
+using final_project_final_project_group_9.Interfaces;
+using final_project_final_project_group_9.Models;
 
-namespace final-project-final-project-group-9.Data
+namespace final_project_final_project_group_9.Data
 {
     public class CoursesContextDAO : ICoursesContextDAO
     {

@@ -1,8 +1,8 @@
 ﻿using final_project_final_project_group_9.Data;
-using final-project-final-project-group-9.Models;
+using final_project_final_project_group_9.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace final-project-final-project-group-9.Controllers
+namespace final_project_final_project_group_9.Controllers
 {
     [ApiController]
     [Route("[controller]")]
